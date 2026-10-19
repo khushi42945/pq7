@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book List</title>
+</head>
+<body>
+    <h1>All Books</h1>
+    <ul>
+        {% for book in books %}
+            <li><strong>{{ book.title }}</strong> by {{ book.author }} (Published: {{ book.published_date }})</li>
+        {% empty %}
+            <li>No books available.</li>
+        {% endfor %}
+    </ul>
+    <br>
+    <a href="/form/">Go to User Form</a>
+</body>
+</html>
